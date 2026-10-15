@@ -1,37 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const projects = [
-  {
-    name: 'Web Design',
-    script: 'Web Design',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=1200&auto=format&fit=crop',
-    tags: ['React', 'Next.js'],
-    desc: 'Interfaces haut de gamme, expériences immersives.',
-  },
-  {
-    name: 'Développement',
-    script: 'Développement',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
-    tags: ['Full-Stack', 'API'],
-    desc: 'Applications performantes et robustes.',
-  },
-  {
-    name: 'Photographie',
-    script: 'Photographie',
-    image: 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=1200&auto=format&fit=crop',
-    tags: ['Automotive', 'Lifestyle'],
-    desc: 'Capturer l\'émotion à travers l\'objectif.',
-  },
-  {
-    name: 'Audiovisuel',
-    script: 'Audiovisuel',
-    image: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1200&auto=format&fit=crop',
-    tags: ['Montage', 'Motion'],
-    desc: 'Narration cinématique et motion design.',
-  },
-];
-
 const Projects = () => {
   return (
     <section id="projects">

@@ -11,21 +11,25 @@ const menuItems = [
     title: 'Projets',
     subtitle: 'Mes Projets',
     to: '/portfolio',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
   },
   {
     title: 'Compétences',
     subtitle: 'Mes Compétences',
     to: '/skills',
+    image: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=1200&auto=format&fit=crop',
   },
   {
     title: 'Parcours',
     subtitle: 'Mon expérience',
     to: '/experience',
+    image: 'https://images.unsplash.com/photo-1506015391300-4802dc74de2e?q=80&w=1200&auto=format&fit=crop',
   },
   {
     title: 'Contact',
     subtitle: 'Me contacter',
     to: '/contact',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop',
   }
 ];
 
@@ -171,7 +175,19 @@ const Home = () => {
                   ref={el => setCardRef(el, index)}
                   className={`group relative overflow-hidden bg-black block min-h-[350px] ${cardHeight} border border-white/10 transition-colors duration-300 hover:border-white ${tailleDeLaCarte}`}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
+                  {item.image && (
+                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                      <img 
+                        ref={el => setImgRef(el, index)}
+                        src={item.image} 
+                        alt={item.title}
+                        className="w-full h-full object-cover opacity-35 group-hover:opacity-60 transition-opacity duration-700 ease-out will-change-transform"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20 pointer-events-none" />
                   
                   <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end">
                     <span className="text-white/50 text-[11px] md:text-[12px] uppercase tracking-[0.3em] mb-4 block">
