@@ -188,7 +188,7 @@ const Portfolio = () => {
             </button>
           </div>
         ) : (
-          <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <motion.div layout className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <AnimatePresence>
               {filteredProjects.map((project) => (
                 <motion.div
@@ -200,7 +200,7 @@ const Portfolio = () => {
                   transition={{ duration: 0.4 }}
                 >
                   <Link to={`/project/${project.id}`} className="p-card group cursor-pointer relative overflow-hidden block h-full border border-white/10 bg-black">
-                    <div className="aspect-[4/3] w-full bg-[#111111]">
+                    <div className="aspect-[3/3] w-full bg-[#111111]">
                       <LazyImage
                         src={project.imagemain}
                         alt={project.title}
