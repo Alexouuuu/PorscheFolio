@@ -1,0 +1,106 @@
+export const projectsData = [
+  {
+    id: 1,
+    type: "Académique",
+    importance: 1,
+    title: "Le Cube",
+    tag: "Développement Web",
+    description: `Un Webdocumentaire complet et immersif sur l'univers du speedcubing et ses compétitions internationales.`,
+    video: null,
+    sourcevideo: null,
+    collaborateurs: ["Témi Kergastel", "Maxime Derènes"],
+    linkcollab: ["https://www.linkedin.com/in/témi-kergastel/","https://www.linkedin.com/in/maxime-derènes-9b997932a/"],
+    technologies: ["HTML", "CSS", "Javascript", "GSAP"],
+    date: "Octobre 2025",
+    imagemain: "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=800&auto=format&fit=crop"
+    ],
+    lien: ["https://mloks77.github.io/SAE302-LeCube/"],
+    objectifs: ["Faire découvrir le speedcubing", "Réaliser un site web immersif", "Optimiser les animations GSAP"]
+  },
+  {
+    id: 2,
+    type: "Académique",
+    importance: 2,
+    title: "Dataviz Logements Sociaux",
+    tag: "Développement Web",
+    description: `Tableau de bord interactif et visualisation cartographique de données sur la répartition des logements sociaux en France.`,
+    video: null,
+    sourcevideo: null,
+    collaborateurs: ["Témi Kergastel","Maxime Derènes","Joachim Tocqueville"],
+    linkcollab: ["https://www.linkedin.com/in/témi-kergastel/", "https://www.linkedin.com/in/maxime-derènes-9b997932a/", "https://www.linkedin.com/in/joachim-tocqueville-1356b2339/"],
+    technologies: ["React.JS", "TailwindCSS" ,"Symfony", "Chart.js", "API REST", "MySQL"],
+    date: "Mars 2026",
+    imagemain: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=800&auto=format&fit=crop"
+    ],
+    lien: ["https://github.com/MLoks77/SAE401"],
+    objectifs: ["Apprendre React", "Créer une API REST performante", "Restituer des données complexes"]
+  },
+  {
+    id: 3,
+    type: "Académique",
+    importance: 3,
+    title: "Sushn'go",
+    tag: "Développement Web",
+    description: `Application web complète de commande et réservation en ligne pour un restaurant japonais moderne.`,
+    video: null,
+    sourcevideo: null,
+    collaborateurs: ["Témi Kergastel", "Maxime Derènes", "Joachim Tocqueville"],
+    linkcollab: ["https://www.linkedin.com/in/témi-kergastel/", "https://www.linkedin.com/in/maxime-derènes-9b997932a/", "https://www.linkedin.com/in/joachim-tocqueville-1356b2339/"],
+    technologies: ["Angular", "TailwindCSS", "PHP", "MySQL", "API REST"],
+    date: "Décembre 2025",
+    imagemain: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1611143669185-af224c5e3252?q=80&w=800&auto=format&fit=crop"
+    ],
+    lien: null,
+    objectifs: ["Apprendre à utiliser les API REST", "Approfondir connaissances en Back-end","Apprendre à utiliser les systèmes de sessions"]
+  },
+  {
+    id: 4,
+    type: "Personnel",
+    importance: 4,
+    title: "Aurora",
+    tag: "Développement Web",
+    description: `Expérience web interactive sur le thème de l'exploration spatiale et de l'astronomie, conçue à l'occasion d'un hackathon.`,
+    video: null,
+    sourcevideo: null,
+    collaborateurs: ["Maxime Derènes", "Témi Kergastel"],
+    linkcollab: ["https://www.linkedin.com/in/maxime-derènes-9b997932a/", "https://www.linkedin.com/in/témi-kergastel/"],
+    technologies: ["HTML", "CSS", "Javascript", "TailwindCSS", "Three.js"],
+    date: "Juin 2026",
+    imagemain: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop",
+    images: [
+      
+    ],
+    lien: ["https://aurora3pc-cca.infinityfree.me/?i=1"],
+    objectifs: ["Participer et performer lors d'un hackathon de 48h", "Concevoir un univers 3D immersif"]
+  },
+  {
+    id: 5,
+    type: "Académique",
+    importance: 5,
+    title: "Palais d'Été",
+    tag: "Développement Web",
+    description: `Modélisation 3D et intégration des bâtiments du palais d'été dans un site web dans le cadre de la SAE 402`,
+    video: null,
+    sourcevideo: null,
+    collaborateurs: ["Maxime Derènes"],
+    linkcollab: ["https://www.linkedin.com/in/maxime-derènes-9b997932a/"],
+    technologies: ["HTML", "JavaScript", "API", "TailwindCSS"],
+    date: "Avril 2026",
+    imagemain: "",
+    images: [""],
+    lien: ["https://mloks77.github.io/SAE402/index.html"],
+    objectifs: ["Apprendre à intégrer des modèles 3D", "Modéliser en 3D"]
+  }
+];
