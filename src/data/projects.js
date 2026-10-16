@@ -230,5 +230,22 @@ export const projectsData = [
     images: [],
     lien: [],
     objectifs: []
+  },
+  {
+    id: 9,
+    type: "Personnel",
+    importance: 9,
+    title: "Popa Detailing",
+    tag: "Développement Web",
+    description: "Création du site web de Popa Detailing",
+    video: null,
+    sourcevideo: null,
+    collaborateurs: [],
+    technologies: ["React", "TailwindCSS"],
+    date: "Octobre 2026",
+    imagemain: "",
+    images: [],
+    lien: [],
+    objectifs: ["Création d'un site Vitrine", "Se faire recommander"],
   }
 ];
