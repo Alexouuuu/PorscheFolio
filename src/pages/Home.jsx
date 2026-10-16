@@ -17,19 +17,19 @@ const menuItems = [
     title: 'Compétences',
     subtitle: 'Mes Compétences',
     to: '/skills',
-    image: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=1200&auto=format&fit=crop',
+    image: "",
   },
   {
     title: 'Parcours',
     subtitle: 'Mon expérience',
     to: '/experience',
-    image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1200&auto=format&fit=crop',
+    image: "",
   },
   {
     title: 'Contact',
     subtitle: 'Me contacter',
     to: '/contact',
-    image: 'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?q=80&w=1200&auto=format&fit=crop',
+    image: "",
   }
 ];
 
@@ -115,7 +115,7 @@ const Home = () => {
               Chisiu<br />Sebastian
             </h1>
             <p className="text-[17px] text-white/50 font-light max-w-[420px] leading-[1.7]">
-              Développeur web Passionné d'automobile.
+              Recherche une alternance pour l'année 2026-2027 en Développement Web.
             </p>
           </div>
 

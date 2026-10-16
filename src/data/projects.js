@@ -169,7 +169,7 @@ export const projectsData = [
     sourcevideo: null,
     collaborateurs: ["Maxime Derènes"],
     linkcollab: ["https://www.linkedin.com/in/maxime-derènes-9b997932a/"],
-    technologies: ["HTML", "JavaScript", "API", "TailwindCSS"],
+    technologies: ["HTML", "JavaScript", "API", "TailwindCSS", "Blender"],
     date: "Avril 2026",
     imagemain: palaisete1,
     images: [
