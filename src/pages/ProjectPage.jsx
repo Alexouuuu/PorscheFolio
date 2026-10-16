@@ -155,7 +155,7 @@ const ProjectPage = () => {
 
             {images.length > 1 && (
               <div className="mt-4">
-                <p className="text-[11px] uppercase tracking-[0.2em] text-white/40 mb-2">Vues du projet ({images.length})</p>
+                <p className="text-[11px] uppercase tracking-[0.2em] text-white/40 mb-2">Images du projet ({images.length})</p>
                 <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
                   {images.map((img, idx) => (
                     <button 
@@ -187,7 +187,7 @@ const ProjectPage = () => {
 
           <div className="w-full lg:w-1/3 flex flex-col">
             <h3 className="text-[12px] uppercase tracking-[0.3em] text-white/30 mb-8 pb-4 border-b border-white/10">
-              Spécifications
+              Détails
             </h3>
 
             <div className="flex flex-col gap-6">
@@ -230,25 +230,20 @@ const ProjectPage = () => {
                 </div>
               )}
 
-              {project.lien && project.lien.length > 0 && (
+              {project.visitable && (project.lienSite || (Array.isArray(project.lien) && project.lien.length > 0) || (typeof project.lien === 'string' && project.lien)) && (
                 <div>
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/40 block mb-2">Liens</span>
-                  <div className="flex flex-col gap-2">
-                    {project.lien.map((l, i) => (
-                      <a 
-                        key={i}
-                        href={l} 
-                        target="_blank" 
-                        rel="noreferrer" 
-                        className="group text-[14px] text-white font-light flex items-center gap-2 w-fit border-b border-white/30 pb-0.5 hover:border-white transition-all"
-                      >
-                        Accéder à la ressource {i + 1}
-                        <svg className="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                    ))}
-                  </div>
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/40 block mb-3">Site web</span>
+                  <a 
+                    href={project.lienSite || (Array.isArray(project.lien) ? project.lien[0] : project.lien)} 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="group inline-flex items-center gap-3 px-6 py-3 border border-white/20 bg-white/5 hover:bg-white hover:text-black transition-all text-white text-[12px] uppercase tracking-[0.2em] font-medium w-fit"
+                  >
+                    <span>Visiter le site</span>
+                    <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                  </a>
                 </div>
               )}
 

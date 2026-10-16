@@ -1,15 +1,23 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projectsData } from '../data/projects';
 import LazyImage from '../components/LazyImage';
 
+const PROJECTS_PER_PAGE = 9;
+
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('Tout');
   const [sortKey, setSortKey] = useState('importance');
   const [searchQuery, setSearchQuery] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
 
   const allTags = ['Tout', ...new Set(projectsData.map(project => project.tag))];
+
+  // Réinitialiser à la page 1 si filtre, tri ou recherche changent
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeFilter, sortKey, searchQuery]);
 
   const filteredProjects = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
@@ -56,9 +64,23 @@ const Portfolio = () => {
     return result;
   }, [activeFilter, sortKey, searchQuery]);
 
+  const totalPages = Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE) || 1;
+  const validCurrentPage = Math.min(Math.max(currentPage, 1), totalPages);
+
+  const paginatedProjects = useMemo(() => {
+    const startIndex = (validCurrentPage - 1) * PROJECTS_PER_PAGE;
+    return filteredProjects.slice(startIndex, startIndex + PROJECTS_PER_PAGE);
+  }, [filteredProjects, validCurrentPage]);
+
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+    window.scrollTo({ top: 300, behavior: 'smooth' });
+  };
+
   const handleResetSearch = () => {
     setSearchQuery('');
     setActiveFilter('Tout');
+    setCurrentPage(1);
   };
 
   return (
@@ -158,6 +180,11 @@ const Portfolio = () => {
           <div className="flex flex-wrap items-center gap-6 flex-shrink-0">
             <span className="text-[12px] text-white/40 font-light uppercase tracking-wider">
               {filteredProjects.length} {filteredProjects.length > 1 ? 'projets' : 'projet'}
+              {totalPages > 1 && (
+                <span className="text-white/30 ml-1.5 font-mono">
+                  (Page {validCurrentPage}/{totalPages})
+                </span>
+              )}
             </span>
 
             <div className="flex items-center gap-4">
@@ -188,61 +215,114 @@ const Portfolio = () => {
             </button>
           </div>
         ) : (
-          <motion.div layout className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <AnimatePresence>
-              {filteredProjects.map((project) => (
-                <motion.div
-                  layout
-                  key={project.id}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.4 }}
-                >
-                  <Link to={`/project/${project.id}`} className="p-card group cursor-pointer relative overflow-hidden block h-full border border-white/10 bg-black">
-                    <div className="aspect-[3/3] w-full bg-[#111111]">
-                      <LazyImage
-                        src={project.imagemain}
-                        alt={project.title}
-                        fallbackTitle={project.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                    </div>
-                    
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent pointer-events-none" />
-                    
-                    <div className="absolute bottom-0 left-0 right-0 z-20 p-6 md:p-8 flex flex-col justify-end pointer-events-none">
-                      <div className="flex flex-wrap gap-2 mb-3">
-                        <span className="p-tag bg-white/10 text-white backdrop-blur-sm border-white/10">
-                          {project.type}
-                        </span>
-                        {project.technologies && project.technologies.slice(0, 2).map((tech) => (
-                          <span key={tech} className="p-tag bg-white/5 text-white/70 backdrop-blur-sm border-white/5 text-[12px]">
-                            {tech}
-                          </span>
-                        ))}
+          <>
+            <motion.div layout className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <AnimatePresence>
+                {paginatedProjects.map((project) => (
+                  <motion.div
+                    layout
+                    key={project.id}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <Link to={`/project/${project.id}`} className="p-card group cursor-pointer relative overflow-hidden block h-full border border-white/10 bg-black">
+                      <div className="aspect-[3/3] w-full bg-[#111111]">
+                        <LazyImage
+                          src={project.imagemain}
+                          alt={project.title}
+                          fallbackTitle={project.title}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
                       </div>
                       
-                      <div className="flex items-end justify-between">
-                        <div>
-                          <span className="text-[11px] uppercase tracking-[0.2em] text-white/50 block mb-2">
-                            {project.tag} • {project.date}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent pointer-events-none" />
+                      
+                      <div className="absolute bottom-0 left-0 right-0 z-20 p-6 md:p-8 flex flex-col justify-end pointer-events-none">
+                        <div className="flex flex-wrap gap-2 mb-3">
+                          <span className="p-tag bg-white/10 text-white backdrop-blur-sm border-white/10">
+                            {project.type}
                           </span>
-                          <span className="text-[20px] md:text-[24px] text-white font-light">
-                            {project.title}
-                          </span>
+                          {project.technologies && project.technologies.slice(0, 2).map((tech) => (
+                            <span key={tech} className="p-tag bg-white/5 text-white/70 backdrop-blur-sm border-white/5 text-[12px]">
+                              {tech}
+                            </span>
+                          ))}
                         </div>
                         
-                        <svg className="w-6 h-6 text-white/40 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
+                        <div className="flex items-end justify-between">
+                          <div>
+                            <span className="text-[11px] uppercase tracking-[0.2em] text-white/50 block mb-2">
+                              {project.tag} • {project.date}
+                            </span>
+                            <span className="text-[20px] md:text-[24px] text-white font-light">
+                              {project.title}
+                            </span>
+                          </div>
+                          
+                          <svg className="w-6 h-6 text-white/40 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                          </svg>
+                        </div>
                       </div>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </motion.div>
+                    </Link>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
+
+            {/* Pagination si plus de 9 projets */}
+            {totalPages > 1 && (
+              <div className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-6 pt-8 border-t border-white/10">
+                <span className="text-[12px] uppercase tracking-[0.2em] text-white/40 font-light">
+                  Page {validCurrentPage} sur {totalPages} • {filteredProjects.length} projets
+                </span>
+
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => handlePageChange(validCurrentPage - 1)}
+                    disabled={validCurrentPage === 1}
+                    className={`px-4 py-2 text-[12px] uppercase tracking-[0.15em] border transition-all ${
+                      validCurrentPage === 1
+                        ? 'border-white/10 text-white/20 cursor-not-allowed'
+                        : 'border-white/20 text-white/70 hover:text-white hover:border-white cursor-pointer'
+                    }`}
+                  >
+                    Précédent
+                  </button>
+
+                  <div className="flex items-center gap-1.5 mx-2">
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+                      <button
+                        key={pageNum}
+                        onClick={() => handlePageChange(pageNum)}
+                        className={`w-9 h-9 text-[12px] font-mono transition-all cursor-pointer ${
+                          validCurrentPage === pageNum
+                            ? 'bg-white text-black font-semibold border border-white'
+                            : 'border border-white/15 text-white/50 hover:text-white hover:border-white/40'
+                        }`}
+                      >
+                        {pageNum}
+                      </button>
+                    ))}
+                  </div>
+
+                  <button
+                    onClick={() => handlePageChange(validCurrentPage + 1)}
+                    disabled={validCurrentPage === totalPages}
+                    className={`px-4 py-2 text-[12px] uppercase tracking-[0.15em] border transition-all ${
+                      validCurrentPage === totalPages
+                        ? 'border-white/10 text-white/20 cursor-not-allowed'
+                        : 'border-white/20 text-white/70 hover:text-white hover:border-white cursor-pointer'
+                    }`}
+                  >
+                    Suivant
+                  </button>
+                </div>
+              </div>
+            )}
+          </>
         )}
 
       </div>

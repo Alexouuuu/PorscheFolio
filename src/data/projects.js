@@ -71,13 +71,15 @@ export const projectsData = [
       lecube6
     ],
     lien: ["https://mloks77.github.io/SAE302-LeCube/"],
+    visitable: true,
+    lienSite: "https://mloks77.github.io/SAE302-LeCube/",
     objectifs: ["Faire découvrir le speedcubing", "Réaliser un site web immersif", "Optimiser les animations GSAP"]
   },
   {
     id: 2,
     type: "Académique",
     importance: 2,
-    title: "Dataviz Logements Sociaux",
+    title: "Dataviz",
     tag: "Développement Web",
     description: `Tableau de bord interactif et visualisation cartographique de données sur la répartition des logements sociaux en France.`,
     video: null,
@@ -97,6 +99,8 @@ export const projectsData = [
       dataviz7
     ],
     lien: ["https://github.com/MLoks77/SAE401"],
+    visitable: false,
+    lienSite: "",
     objectifs: ["Apprendre React", "Créer une API REST performante", "Restituer des données complexes"]
   },
   {
@@ -123,6 +127,8 @@ export const projectsData = [
       sushngo9
     ],
     lien: null,
+    visitable: false,
+    lienSite: "",
     objectifs: ["Apprendre à utiliser les API REST", "Approfondir connaissances en Back-end","Apprendre à utiliser les systèmes de sessions"]
   },
   {
@@ -148,6 +154,8 @@ export const projectsData = [
       aurora5
     ],
     lien: ["https://aurora3pc-cca.infinityfree.me/?i=1"],
+    visitable: true,
+    lienSite: "https://aurora3pc-cca.infinityfree.me/?i=1",
     objectifs: ["Participer et performer lors d'un hackathon de 48h", "Concevoir un univers 3D immersif"]
   },
   {
@@ -171,6 +179,8 @@ export const projectsData = [
       palaisete4
     ],
     lien: ["https://mloks77.github.io/SAE402/index.html"],
+    visitable: true,
+    lienSite: "https://mloks77.github.io/SAE402/index.html",
     objectifs: ["Apprendre à intégrer des modèles 3D", "Modéliser en 3D"]
   },
   {
@@ -195,6 +205,8 @@ export const projectsData = [
       acf2l5
     ],
     lien: ["https://alexouuuu.github.io/ACF2L/"],
+    visitable: true,
+    lienSite: "https://alexouuuu.github.io/ACF2L/",
     objectifs: ["Apprendre à utiliser Bootstrap"]
   },
   {
@@ -212,6 +224,8 @@ export const projectsData = [
     imagemain: "",
     images: [],
     lien: [],
+    visitable: false,
+    lienSite: "",
     objectifs: ["Créer un jeu vidéo complet en autonomie", "Mettre en avant les compétences MMI", "Gagner le festival MMI"]
   },
   {
@@ -229,6 +243,8 @@ export const projectsData = [
     imagemain: "",
     images: [],
     lien: [],
+    visitable: false,
+    lienSite: "",
     objectifs: []
   },
   {
@@ -246,6 +262,8 @@ export const projectsData = [
     imagemain: "",
     images: [],
     lien: [],
+    visitable: false,
+    lienSite: "",
     objectifs: ["Création d'un site Vitrine", "Se faire recommander"],
   }
 ];
