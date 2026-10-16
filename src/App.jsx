@@ -8,8 +8,8 @@ import Skills from './pages/Skills';
 import Experience from './pages/Experience';
 import Contact from './pages/Contact';
 import ProjectPage from './pages/ProjectPage';
-import CarsPortfolio from './pages/CarsPortfolio';
-import CarPage from './pages/CarPage';
+import PostersPortfolio from './pages/PostersPortfolio';
+import PosterPage from './pages/PosterPage';
 
 function Layout() {
   return (
@@ -40,11 +40,8 @@ const router = createBrowserRouter([
       { path: '/project/:id', element: <ProjectPage /> },
       { path: '/projects/:id', element: <ProjectPage /> },
       { path: '/projet/:id', element: <ProjectPage /> },
-      { path: '/automotive', element: <CarsPortfolio /> },
-      { path: '/cars', element: <CarsPortfolio /> },
-      { path: '/voitures', element: <CarsPortfolio /> },
-      { path: '/automotive/:id', element: <CarPage /> },
-      { path: '/cars/:id', element: <CarPage /> },
+      { path: '/posters', element: <PostersPortfolio /> },
+      { path: '/posters/:id', element: <PosterPage /> },
       { path: '*', element: <Navigate to="/" replace /> },
     ],
   },

@@ -1,50 +1,50 @@
 // Le Cube
-import lecube0 from '../assets/images-LeCube/lecube0-BMYTLHQb.webp';
-import lecube1 from '../assets/images-LeCube/lecube1-BSZBp0s0.webp';
-import lecube2 from '../assets/images-LeCube/lecube2-BVL9JYwt.webp';
-import lecube3 from '../assets/images-LeCube/lecube3-DUB-3PTI.webp';
-import lecube4 from '../assets/images-LeCube/lecube4-D4XrBW5y.webp';
-import lecube5 from '../assets/images-LeCube/lecube5-CQbLgJ75.webp';
-import lecube6 from '../assets/images-LeCube/lecube6-B1ZTD1x5.webp';
+import lecube0 from '../assets/images-projets/images-LeCube/lecube0-BMYTLHQb.webp';
+import lecube1 from '../assets/images-projets/images-LeCube/lecube1-BSZBp0s0.webp';
+import lecube2 from '../assets/images-projets/images-LeCube/lecube2-BVL9JYwt.webp';
+import lecube3 from '../assets/images-projets/images-LeCube/lecube3-DUB-3PTI.webp';
+import lecube4 from '../assets/images-projets/images-LeCube/lecube4-D4XrBW5y.webp';
+import lecube5 from '../assets/images-projets/images-LeCube/lecube5-CQbLgJ75.webp';
+import lecube6 from '../assets/images-projets/images-LeCube/lecube6-B1ZTD1x5.webp';
 
 // Dataviz
-import dataviz1 from '../assets/images-Dataviz/dataviz1-CYVjQ7SB.webp';
-import dataviz2 from '../assets/images-Dataviz/dataviz2-DBt65cD_.webp';
-import dataviz3 from '../assets/images-Dataviz/dataviz3-Bc0FGwBy.webp';
-import dataviz4 from '../assets/images-Dataviz/dataviz4-Cs8C8EW-.webp';
-import dataviz5 from '../assets/images-Dataviz/dataviz5-BTF5G4J9.webp';
-import dataviz6 from '../assets/images-Dataviz/dataviz6-C7lmoBUD.webp';
-import dataviz7 from '../assets/images-Dataviz/dataviz7-DqlLjO8x.webp';
+import dataviz1 from '../assets/images-projets/images-Dataviz/dataviz1-CYVjQ7SB.webp';
+import dataviz2 from '../assets/images-projets/images-Dataviz/dataviz2-DBt65cD_.webp';
+import dataviz3 from '../assets/images-projets/images-Dataviz/dataviz3-Bc0FGwBy.webp';
+import dataviz4 from '../assets/images-projets/images-Dataviz/dataviz4-Cs8C8EW-.webp';
+import dataviz5 from '../assets/images-projets/images-Dataviz/dataviz5-BTF5G4J9.webp';
+import dataviz6 from '../assets/images-projets/images-Dataviz/dataviz6-C7lmoBUD.webp';
+import dataviz7 from '../assets/images-projets/images-Dataviz/dataviz7-DqlLjO8x.webp';
 
 // Sushn'go
-import sushngo1 from '../assets/images-Sushngo/sushngo1-F-pyb1g0.webp';
-import sushngo2 from '../assets/images-Sushngo/sushngo2-t35ACHS9.webp';
-import sushngo3 from '../assets/images-Sushngo/sushngo3-Dmc-itW3.webp';
-import sushngo5 from '../assets/images-Sushngo/sushngo5-CiHeCzvY.webp';
-import sushngo6 from '../assets/images-Sushngo/sushngo6-B8rhCsiM.webp';
-import sushngo8 from '../assets/images-Sushngo/sushngo8-qPEcMGgQ.webp';
-import sushngo9 from '../assets/images-Sushngo/sushngo9-5OLe1nIF.webp';
+import sushngo1 from '../assets/images-projets/images-Sushngo/sushngo1-F-pyb1g0.webp';
+import sushngo2 from '../assets/images-projets/images-Sushngo/sushngo2-t35ACHS9.webp';
+import sushngo3 from '../assets/images-projets/images-Sushngo/sushngo3-Dmc-itW3.webp';
+import sushngo5 from '../assets/images-projets/images-Sushngo/sushngo5-CiHeCzvY.webp';
+import sushngo6 from '../assets/images-projets/images-Sushngo/sushngo6-B8rhCsiM.webp';
+import sushngo8 from '../assets/images-projets/images-Sushngo/sushngo8-qPEcMGgQ.webp';
+import sushngo9 from '../assets/images-projets/images-Sushngo/sushngo9-5OLe1nIF.webp';
 
 // Aurora
-import aurora1 from '../assets/images-Aurora/aurora1-accueil.webp';
-import aurora2 from '../assets/images-Aurora/aurora2-DEAE_t6e.webp';
-import aurora3 from '../assets/images-Aurora/aurora3-D8gozF7i.webp';
-import aurora3p1 from '../assets/images-Aurora/aurora3p1-BOyk1m1a.webp';
-import aurora4 from '../assets/images-Aurora/aurora4-KF8jzkym.webp';
-import aurora5 from '../assets/images-Aurora/aurora5-DPnXPuIv.webp';
+import aurora1 from '../assets/images-projets/images-Aurora/aurora1-accueil.webp';
+import aurora2 from '../assets/images-projets/images-Aurora/aurora2-DEAE_t6e.webp';
+import aurora3 from '../assets/images-projets/images-Aurora/aurora3-D8gozF7i.webp';
+import aurora3p1 from '../assets/images-projets/images-Aurora/aurora3p1-BOyk1m1a.webp';
+import aurora4 from '../assets/images-projets/images-Aurora/aurora4-KF8jzkym.webp';
+import aurora5 from '../assets/images-projets/images-Aurora/aurora5-DPnXPuIv.webp';
 
 // Palais d'Été
-import palaisete1 from '../assets/images-Palaisete/palaisete1-_50zyvET.webp';
-import palaisete2 from '../assets/images-Palaisete/palaisete2-M-b5FbuS.webp';
-import palaisete3 from '../assets/images-Palaisete/palaisete3-0WdZlCMm.webp';
-import palaisete4 from '../assets/images-Palaisete/palaisete4-DiEOkgJO.webp';
+import palaisete1 from '../assets/images-projets/images-Palaisete/palaisete1-_50zyvET.webp';
+import palaisete2 from '../assets/images-projets/images-Palaisete/palaisete2-M-b5FbuS.webp';
+import palaisete3 from '../assets/images-projets/images-Palaisete/palaisete3-0WdZlCMm.webp';
+import palaisete4 from '../assets/images-projets/images-Palaisete/palaisete4-DiEOkgJO.webp';
 
 // ACF2L
-import acf2l1 from '../assets/images-acf2l/acf2l-1.webp';
-import acf2l2 from '../assets/images-acf2l/acf2l-2.webp';
-import acf2l3 from '../assets/images-acf2l/acf2l-3.webp';
-import acf2l4 from '../assets/images-acf2l/acf2l-4.webp';
-import acf2l5 from '../assets/images-acf2l/acf2l-5.webp';
+import acf2l1 from '../assets/images-projets/images-acf2l/acf2l-1.webp';
+import acf2l2 from '../assets/images-projets/images-acf2l/acf2l-2.webp';
+import acf2l3 from '../assets/images-projets/images-acf2l/acf2l-3.webp';
+import acf2l4 from '../assets/images-projets/images-acf2l/acf2l-4.webp';
+import acf2l5 from '../assets/images-projets/images-acf2l/acf2l-5.webp';
 
 export const projectsData = [
   {

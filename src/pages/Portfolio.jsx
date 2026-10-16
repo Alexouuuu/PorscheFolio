@@ -97,8 +97,8 @@ const Portfolio = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Link to="/automotive" className="group flex items-center gap-3 px-6 py-3 md:px-8 md:py-4 border border-white/20 bg-white/5 hover:bg-white hover:text-black transition-colors text-white text-[11px] md:text-[13px] uppercase tracking-widest w-fit">
-              Mes projets automobiles
+            <Link to="/posters" className="group flex items-center gap-3 px-6 py-3 md:px-8 md:py-4 border border-white/20 bg-white/5 hover:bg-white hover:text-black transition-colors text-white text-[11px] md:text-[13px] uppercase tracking-widest w-fit">
+              Mes posters automobiles
               <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
           </motion.div>

@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
   { name: 'Projets', to: '/portfolio' },
-  { name: 'Automobile', to: '/automotive' },
+  { name: 'Posters', to: '/posters' },
   { name: 'Compétences', to: '/skills' },
   { name: 'Parcours', to: '/experience' },
   { name: 'Contact', to: '/contact' },
