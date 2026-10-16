@@ -11,7 +11,7 @@ const menuItems = [
     title: 'Projets',
     subtitle: 'Mes Projets',
     to: '/portfolio',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
+    image: "",
   },
   {
     title: 'Compétences',
@@ -23,13 +23,13 @@ const menuItems = [
     title: 'Parcours',
     subtitle: 'Mon expérience',
     to: '/experience',
-    image: 'https://images.unsplash.com/photo-1506015391300-4802dc74de2e?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1200&auto=format&fit=crop',
   },
   {
     title: 'Contact',
     subtitle: 'Me contacter',
     to: '/contact',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?q=80&w=1200&auto=format&fit=crop',
   }
 ];
 

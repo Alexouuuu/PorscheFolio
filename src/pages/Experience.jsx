@@ -7,7 +7,7 @@ const experiences = [
     period: 'Avril 2026 - Juin 2026',
     title: 'Développeur Full-stack - Stage 2 mois',
     company: 'TSMGO - The Show Must Go On !',
-    description: "Réalisation d'un site web complet pour la gestion de la paie et des employés. Le but était de monter en compétences sur l'aspect Back-end qui était fragile , et approfondir les compétences en front-end.",
+    description: "Réalisation d'une application web complète pour la gestion de la paie et des employés en interne. Le but était de monter en compétences sur l'aspect Back-end qui était fragile , et approfondir les compétences en front-end.",
   },
   {
     period: 'Juillet 2025',
