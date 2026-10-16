@@ -242,7 +242,7 @@ export const projectsData = [
     sourcevideo: null,
     collaborateurs: [],
     technologies: ["React", "TailwindCSS"],
-    date: "Octobre 2026",
+    date: "En cours...",
     imagemain: "",
     images: [],
     lien: [],
